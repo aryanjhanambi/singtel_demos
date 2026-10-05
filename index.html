@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Singtel AI Pass | Demo redemption</title>
+    <title>Singtel AI Pass | Voucher redemption</title>
     <style>
       :root { --ink:#232327; --muted:#6d6e76; --line:#e4e5e9; --blue:#0f75bd; --soft:#f6f7f9; }
       * { box-sizing:border-box; }
@@ -13,8 +13,6 @@
       .brand { display:flex; align-items:center; }.brand img{display:block;width:168px;height:auto;}
       .icons { display:flex; gap:28px; color:#242429; } .icons svg { width:24px; height:24px; stroke-width:1.9; }
       main { flex:1; padding:66px max(12vw, 80px) 110px; }
-      .demo-pill { display:inline-flex; align-items:center; gap:8px; padding:7px 11px; border:1px solid #b8d7ed; background:#f1f9fe; border-radius:99px; color:#17669f; font-size:12px; font-weight:700; letter-spacing:.02em; }
-      .demo-pill span { width:7px; height:7px; background:#19a777; border-radius:50%; }
       h1 { margin:28px 0 36px; font-size:43px; letter-spacing:-1.5px; line-height:1.1; }
       .card { width:min(100%, 500px); }
       label { display:block; font-size:14px; color:#4d4d54; font-weight:600; margin-bottom:9px; }
@@ -55,7 +53,7 @@
         </section>
         <section class="success" id="success" aria-live="polite">
           <div class="tick">✓</div><h2>Your Singtel AI Pass is activated</h2>
-          <p>This is a simulated redemption for the demo. Your agent can now continue into the AI Pass experience with the activated entitlement.</p>
+          <p>Your redemption is complete. You can now continue into the AI Pass experience with your activated entitlement.</p>
           <button id="continue" type="button">Continue to AI Pass</button>
         </section>
       </main>
@@ -70,7 +68,7 @@
       const hint = document.querySelector('#hint');
       form.addEventListener('submit', (event) => {
         event.preventDefault();
-        hint.textContent = 'Validating demo voucher…';
+        hint.textContent = 'Validating voucher…';
         setTimeout(() => { document.querySelector('#form-section').style.display = 'none'; document.querySelector('#success').classList.add('visible'); }, 650);
       });
       document.querySelector('#continue').addEventListener('click', () => { window.location.href = 'https://aryanjhanambi.github.io/singtel_demos/ai-pass.html'; });
